@@ -21,7 +21,7 @@ namespace core_web.demo.Controllers
         [HttpGet("{id}")]
         public ActionResult<string> Get(int id)
         {
-            return "value";
+            return $"{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")} {id}";
         }
 
         // POST api/values
