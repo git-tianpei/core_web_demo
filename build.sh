@@ -3,9 +3,6 @@
 imageName=git.core.web
 containerName=git.core.web
 
-cd /var/jenkins_home/workspace/pipeline/
-echo "当前路径：$PWD"
-
 echo "尝试删除容器"
 if docker ps -a | grep $containerName ;then
         echo "存在容器$containerName"
@@ -19,6 +16,9 @@ if docker images | grep $imageName ; then
         docker rmi -f $imageName
         echo "删除镜像$imageName成功"
 fi
+
+cd /var/jenkins_home/workspace/pipeline/core_web.demo
+echo "当前路径：$PWD"
 
 echo "构建镜像"
 docker build -t $imageName .

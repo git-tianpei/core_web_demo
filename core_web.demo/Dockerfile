@@ -4,7 +4,7 @@ EXPOSE 80
 
 FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS build
 WORKDIR /src
-COPY ["core_web.demo.csproj", "core_web.demo"]
+COPY ["core_web.demo.csproj", "core_web.demo/"]
 RUN dotnet restore "core_web.demo/core_web.demo.csproj"
 WORKDIR "/src/AspDotNetCoreWeb"
 COPY . .
