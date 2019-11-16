@@ -8,7 +8,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{11223C9F-137B-4299-B80F-CA807A4A9045}"
 	ProjectSection(SolutionItems) = preProject
 		build.sh = build.sh
-		Dockerfile = Dockerfile
 		Jenkinsfile = Jenkinsfile
 	EndProjectSection
 EndProject
