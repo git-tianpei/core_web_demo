@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
@@ -21,7 +22,7 @@ namespace core_web.demo.Controllers
         [HttpGet("{id}")]
         public ActionResult<string> Get(int id)
         {
-            return $"{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")} {id}";
+            return $"time:{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")}\nid:{id}\nsystem info:{RuntimeInformation.OSDescription}";
         }
 
         // POST api/values
