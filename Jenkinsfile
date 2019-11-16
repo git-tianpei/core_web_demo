@@ -3,12 +3,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'echo "Hello Wangtp"'
-                sh '''
-                    echo $PWD
-					docker images
-					docker ps -a
-                '''
+                sh 'echo "build"'
+                sh '/bin/bash build.sh'
             }
         }
     }

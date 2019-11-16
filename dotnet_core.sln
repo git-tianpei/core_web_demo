@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "core_web.demo", "core_web.d
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{11223C9F-137B-4299-B80F-CA807A4A9045}"
 	ProjectSection(SolutionItems) = preProject
+		..\dotnetcore\AspDotNetCoreWeb\build.sh = ..\dotnetcore\AspDotNetCoreWeb\build.sh
+		..\dotnetcore\AspDotNetCoreWeb\Dockerfile = ..\dotnetcore\AspDotNetCoreWeb\Dockerfile
 		Jenkinsfile = Jenkinsfile
 	EndProjectSection
 EndProject
