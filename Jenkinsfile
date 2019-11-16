@@ -6,8 +6,8 @@ pipeline {
                 sh 'echo "Hello Wangtp"'
                 sh '''
                     echo $PWD
-					docker images;
-					docker ps -a;
+					docker images
+					docker ps -a
                 '''
             }
         }
