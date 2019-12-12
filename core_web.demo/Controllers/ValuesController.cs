@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Threading.Tasks;
+using core_web.demo.ioc;
 using Microsoft.AspNetCore.Mvc;
 
 namespace core_web.demo.Controllers
@@ -11,6 +12,13 @@ namespace core_web.demo.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
+        private ITestIoc testIoc;
+
+        public ValuesController(ITestIoc test)
+        {
+            testIoc = test;
+        }
+
         // GET api/values
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
@@ -22,7 +30,7 @@ namespace core_web.demo.Controllers
         [HttpGet("{id}")]
         public ActionResult<string> Get(int id)
         {
-            return $"time:{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")}\nid:{id}\nsystem info:{RuntimeInformation.OSDescription}";
+            return $"time:{testIoc.NowTimeString()}\nid:{id}\nsystem info:{RuntimeInformation.OSDescription}";
         }
 
         // POST api/values
