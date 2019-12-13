@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using core_web.demo.Data.Dto;
 using core_web.demo.Data.Entity;
-using core_web.demo.Data.Req;
 using Dapper;
 using MySql.Data.MySqlClient;
 

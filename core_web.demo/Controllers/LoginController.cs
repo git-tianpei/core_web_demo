@@ -37,6 +37,14 @@ namespace core_web.demo.Controllers
             return new CommonResult();
         }
 
+        [HttpGet]
+        [Route("test")]
+        [AllowAnonymous]
+        public string Test()
+        {
+            return "ok";
+        }
+
         [NonAction]
         private async Task SetCookie(User user)
         {

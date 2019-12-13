@@ -1,6 +1,6 @@
 ﻿using core_web.demo.Config;
 
-namespace core_web.demo.Data.Dto
+namespace core_web.demo.Dao
 {
     public class MysqlBase
     {
