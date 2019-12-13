@@ -20,7 +20,7 @@ namespace core_web.demo.Controllers
         [HttpGet("{id}")]
         public ActionResult<string> Get(int id)
         {
-            return $"time:{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")}\nid:{id}\nsystem info:{RuntimeInformation.OSDescription}";
+            return $"time:{DateTime.Now.ToString("HH:mm:ss")}\nid:{id}\nsystem info:{RuntimeInformation.OSDescription}";
         }
 
         // POST api/values
