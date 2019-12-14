@@ -42,7 +42,7 @@ namespace core_web.demo.Controllers
         [AllowAnonymous]
         public string Test()
         {
-            return "ok";
+            return $"{DateTime.Now.Ticks}:ok\n";
         }
 
         [NonAction]
