@@ -23,7 +23,7 @@ namespace core_web.demo.Dao
         {
             using (var conn = new MySqlConnection(ConnectionString))
             {
-                var list = conn.Query<Note>("select * from wx_note where userId = @userId", new { userId }).ToList();
+                var list = conn.Query<Note>("select * from wx_note where userId = @userId order by createTime desc", new { userId }).ToList();
 
                 list.ForEach(x =>
                 {
