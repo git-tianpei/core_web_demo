@@ -40,9 +40,14 @@ namespace core_web.demo.Controllers
         [HttpGet]
         [Route("test")]
         [AllowAnonymous]
-        public string Test()
+        public string Test(string time)
         {
-            return $"{DateTime.Now.Ticks}:ok\n";
+            time = $"{Guid.NewGuid()}_{time}";
+            
+            //Random r=new Random();
+            //Thread.Sleep(r.Next(100,200));
+            
+            return time;
         }
 
         [NonAction]
